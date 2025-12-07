@@ -1,5 +1,7 @@
-import Button from "@/components/commons/Button";
+
 import { useRouter } from "next/router";
+import Button from "@/components/commons/Button";
+
 const Home: React.FC = () => {
   const router = useRouter();
 
@@ -17,13 +19,15 @@ const Home: React.FC = () => {
             Discover Your Next Favorite{" "}
             <span className="text-[#E2D609]">Movie</span>
           </h1>
+
           <p className="text-lg md:text-2xl mb-8 max-w-2xl">
             Explore the latest blockbuster movies, critically acclaimed films,
-            and your personal favorites – all in one place.
+            and your personal favorites.
           </p>
+
           <Button
             title="Browse Movies"
-            action={() => router.push("/movies", undefined, { shallow: false })}
+            action={() => router.push("/movies")}
           />
         </div>
       </section>
@@ -33,9 +37,10 @@ const Home: React.FC = () => {
           Join CineSeek Now!
         </h2>
         <p className="text-lg md:text-2xl mb-12">
-          Sign up today to get access to the latest movies, exclusive content,
-          and personalized movie recommendations.
+          Sign up today for exclusive content, updates, and personalized movie
+          recommendations.
         </p>
+
         <Button title="Get Started" />
       </section>
     </div>
